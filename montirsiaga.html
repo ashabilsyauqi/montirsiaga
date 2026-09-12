@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>MontirSiaga.com - On-Demand Emergency Roadside Assistance</title>
+  <meta name="description" content="Platform tanggap darurat mogok di jalan 1-Click Action. Montir Datang, Panik Hilang. Bantuan mekanik ringan, jumper aki, tambal ban, dan derek terdekat.">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+  <!-- Custom Mobile App Stylesheet -->
+  <link rel="stylesheet" href="montirsiaga_style.css">
+</head>
+<body>
+
+  <!-- Mobile Smartphone Simulator Shell -->
+  <div class="mobile-device-wrapper">
+
+    <!-- Top Status Bar -->
+    <div class="mobile-status-bar">
+      <span id="mobile-clock">08:30</span>
+      <div class="status-icons">
+        <span>📶 5G</span>
+        <span>⚡ 98%</span>
+      </div>
+    </div>
+
+    <!-- App Header -->
+    <header class="app-header">
+      <a href="#" class="brand-badge" onclick="resetToHome()">
+        <div class="brand-icon">🚨</div>
+        <div>
+          <div class="brand-title">MontirSiaga<span style="color: #ef4444;">.com</span></div>
+          <div class="brand-tagline">Montir Datang, Panik Hilang</div>
+        </div>
+      </a>
+
+      <!-- Driver vs Mechanic Mode Toggle -->
+      <button class="role-toggle-btn" id="role-toggle-btn" title="Ganti Mode Pengendara / Mitra Montir">
+        <span>🚗 Mode Pengendara</span>
+      </button>
+    </header>
+
+    <!-- Main Viewport Container (Rendered dynamically) -->
+    <main class="app-viewport" id="app-viewport-content">
+      <!-- Injected via montirsiaga_app.js -->
+    </main>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="app-bottom-nav">
+      <button class="nav-item active" data-tab="home">
+        <i>🚨</i>
+        <span>SOS Darurat</span>
+      </button>
+
+      <button class="nav-item" data-tab="tariff">
+        <i>💰</i>
+        <span>Tarif 80/20</span>
+      </button>
+
+      <button class="nav-item" data-tab="guide">
+        <i>🛡️</i>
+        <span>Panduan</span>
+      </button>
+
+      <button class="nav-item" data-tab="partner">
+        <i>🤝</i>
+        <span>Gabung Mitra</span>
+      </button>
+    </nav>
+
+  </div>
+
+  <!-- Leaflet Map JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- App Core JS -->
+  <script src="montirsiaga_app.js"></script>
+</body>
+</html>
