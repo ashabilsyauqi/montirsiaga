@@ -1,0 +1,7 @@
+services:
+  montirsiaga:
+    build: .
+    container_name: montirsiaga_app
+    restart: always
+    ports:
+      - "3016:80"
